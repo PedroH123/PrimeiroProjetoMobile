@@ -1,2 +1,26 @@
 /**/
 
+body{
+  background-color:rgb(0, 0, 0);
+}
+
+label{
+  color:white;
+  font-family:fantasy;
+}
+
+
+
+
+
+#somar{
+
+background-color:rgb(63, 64, 63);
+    color: white;
+    font-size: 20px;
+    min-width: 10%;
+    text-decoration:none;
+    cursor:pointer;
+    margin-right: 30px;
+
+}
