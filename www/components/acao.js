@@ -3,6 +3,10 @@
 $(document).on("click","#limpar",function(){
 
   $("#resultado").val("");
+  $("#valor1").val("");
+    $("#valor2").val("");
+  $("#valorX").val("");
+
 })
 
 $(document).on("click","#somar",function(){
@@ -71,8 +75,8 @@ $(document).on("click","#potenciacao",function(){
   var valor2;
 
 
-  valor = parseInt($("#valorY").val());
-  valor2 = parseInt($("#valorZ").val());
+  valor = parseInt($("#valor1").val());
+  valor2 = parseInt($("#valor2").val());
 
   resultado = Math.pow(valor,valor2);
 
@@ -87,10 +91,11 @@ $(document).on("click","#restoDivisao",function(){
   var valor2;
 
 
-  valor = parseInt($("#valorY").val());
-  valor2 = parseInt($("#valorZ").val());
+  valor = parseInt($("#valor1").val());
+  valor2 = parseInt($("#valor2").val());
 
   resultado = valor % valor2;
 
   $("#resultado").val(resultado);
 })
+
