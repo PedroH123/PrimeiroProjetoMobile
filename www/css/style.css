@@ -4,10 +4,7 @@ body{
   background-color:rgb(0, 0, 0);
 }
 
-input{
-  
 
-}
 
 label{
   color:white;
@@ -21,21 +18,74 @@ background-color:rgb(63, 64, 63);
     font-size: 20px;
     min-width: 10%;
     text-decoration:none;
-    cursor:pointer;
-    margin-right: 30px;
+    margin-right: 10px;
     margin-top: 10px;
-
+border-color: purple;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 #resultado{
+  margin-top: 20px;
   width: 100%;
-  height: 200px;
+  height: 70%;
   font-size: 50px;
   text-align: center;
 }
 
 .numero{
-  width: 100px;
-  height:100px;
-  margin-left: 10px;
+  width: 100%;
+  height:70px;
+  margin-right: -5px;
+}
+
+.simbolo{
+  width: 100%;
+  height:80px;;
+}
+
+#somar{
+   margin-right: -40px;
+   margin-left: 10px;
+}
+
+#subtrair{
+   margin-left: -20px;
+}
+
+#dividir{
+   margin-right: -40px;
+   margin-left: 10px;
+   margin-top: -15px;
+}
+
+#multiplicar{
+   margin-left: -20px;
+      margin-top: -15px;
+}
+
+#potenciacao{
+   margin-right: -40px;
+   margin-left: 10px;
+      margin-top: -15px;
+}
+
+#restoDivisao{
+   margin-left: -20px;
+      margin-top: -15px;
+}
+
+#porcentagem{
+   margin-right: -40px;
+   margin-left: 10px;
+      margin-top: -15px;
+}
+
+#raiz{
+   margin-left: -20px;
+      margin-top: -15px;
+}
+
+button:hover {
+    border-color:purple;
+    background-color: rgb(255, 255, 255);
 }

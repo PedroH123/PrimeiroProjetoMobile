@@ -2,8 +2,18 @@
 var numero;
 var operacao;
 var resultado;
+var operador = false;
+var numeral = false;
+var raiz = false;
 
-$(document)
+$(document).on("click","#limpar",function(){
+  
+  $("#resultado").val("");
+  operador = false;
+  numeral = false;
+  raiz = false;
+
+})
 
 $(document).on("click","#igual",function(){
 
@@ -41,131 +51,219 @@ $(document).on("click","#igual",function(){
        $("#resultado").val(resultado);
     break;
 
+    operador = false;
+    numeral = false;
+    raiz = false;
   }  
 })
 
 
 $(document).on("click","#1",function(){
-  numero = 1;
+  if(raiz == false){
+    numero = 1;
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+  numeral = true;
+  }
 })
 
 $(document).on("click","#2",function(){
-  numero = 2;
+  if(raiz == false){
+    numero = 2;
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+    numeral = true;
+  }
 })
 $(document).on("click","#3",function(){
-  numero = 3;
+  if(raiz == false){
+    numero = 3;
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+    numeral = true;
+  }
 })
 $(document).on("click","#4",function(){
-  numero = 4;
+  if(raiz == false){
+    numero = 4;
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+    numeral = true;
+  }
 })
 $(document).on("click","#5",function(){
-  numero = 5;
+  if(raiz == false){
+    numero = 5;
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+    numeral = true;
+  }
 })
 $(document).on("click","#6",function(){
-  numero = 6;
+  if(raiz == false){
+    numero = 6;
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+    numeral = true;
+  }
 })
 $(document).on("click","#7",function(){
-  numero = 7;
+  if(raiz == false){
+    numero = 7;
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+    numeral = true;
+  }
 })
 $(document).on("click","#8",function(){
-  numero = 8;
+  if(raiz == false){
+    numero = 7;
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+    numeral = true;
+  }   
 })
 $(document).on("click","#9",function(){
-  numero = 9;
+  if(raiz == false){
+    numero = 9;
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+  numeral = true;
+  }
 })
 $(document).on("click","#0",function(){
-  numero = 0;
+  if(raiz == false){
+    numero = 0;
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+  numeral = true;
+  }
 })
 $(document).on("click","#ponto",function(){
-  numero = ".";
+  if(raiz == false){
+    numero = ".";
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
+  numeral = true;
+  }
 })
 
 
 
 $(document).on("click","#somar",function(){
-operacao = " + ";
 
-operacao = $("#resultado").val() + operacao;
+  if(operador == false && numeral == true){
+  operacao = " + ";
 
-$("#resultado").val(operacao);
+  operacao = $("#resultado").val() + operacao;
+
+  $("#resultado").val(operacao);
+
+  operador = true;
+  }
+
 })
 
 $(document).on("click","#subtrair",function(){
-operacao = " - ";
+  
+  if(operador == false && numeral == true){
+    operacao = " - ";
 
-operacao = $("#resultado").val() + operacao;
+    operacao = $("#resultado").val() + operacao;
 
-$("#resultado").val(operacao);
+    $("#resultado").val(operacao);
+
+    operador = true;
+  }
+  else if($("#resultado").val() == ""){
+    operacao = "-";
+
+    operacao = $("#resultado").val() + operacao;
+
+    $("#resultado").val(operacao);
+
+  }
+  
+
 })
 
 $(document).on("click","#dividir",function(){
 operacao = " / ";
 
-operacao = $("#resultado").val() + operacao;
+if(operador == false && numeral == true){
+  operacao = $("#resultado").val() + operacao;
 
 $("#resultado").val(operacao);
+
+operador = true;
+}
 })
 
 $(document).on("click","#multiplicar",function(){
-operacao = " * ";
+operacao = " X ";
 
-operacao = $("#resultado").val() + operacao;
+if(operador == false && numeral == true){
+  operacao = $("#resultado").val() + operacao;
 
 $("#resultado").val(operacao);
+
+operador = true;
+}
+
 })
 
 $(document).on("click","#potenciacao",function(){
 operacao = " ^ ";
 
+if(operador == false && numeral == true) {
 operacao = $("#resultado").val() + operacao;
 
 $("#resultado").val(operacao);
+
+operador = true;
+}
+
 })
 
 $(document).on("click","#porcentagem",function(){
 operacao = " % ";
 
+if(operador == false && numeral == true){
 operacao = $("#resultado").val() + operacao;
 
 $("#resultado").val(operacao);
+
+operador = true;
+}
+
 })
 
 $(document).on("click","#raiz",function(){
 operacao = " √ ";
 
+if(operador == false && numeral == true && raiz == false){
 operacao = $("#resultado").val() + operacao;
 
 $("#resultado").val(operacao);
+
+operador = true;
+raiz = true;
+
+}
+
 })
 
 $(document).on("click","#restoDivisao",function(){
 operacao = " ÷ ";
 
-operacao = $("#resultado").val() + operacao;
+if(operador == false && numeral == true){
+  operacao = $("#resultado").val() + operacao;
 
 $("#resultado").val(operacao);
+
+operador = true;
+}
+
 })
 
 
