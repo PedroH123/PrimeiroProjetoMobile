@@ -21,8 +21,12 @@ background-color:rgb(63, 64, 63);
     margin-right: 10px;
     margin-top: 10px;
 border-color: purple;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
+.btn:focus{
+    outline: none;
+}
+
 
 #resultado{
   margin-top: 20px;
@@ -44,48 +48,52 @@ border-color: purple;
 }
 
 #somar{
-   margin-right: -40px;
-   margin-left: 10px;
+  width: 100%;
+  height:70px;
+  margin-right: -5px;
 }
 
 #subtrair{
-   margin-left: -20px;
-}
+width: 100%;
+  height:70px;
+  margin-right: -5px;}
 
 #dividir{
-   margin-right: -40px;
-   margin-left: 10px;
-   margin-top: -15px;
-}
+width: 100%;
+  height:70px;
+  margin-right: -5px;}
 
 #multiplicar{
-   margin-left: -20px;
-      margin-top: -15px;
-}
+width: 100%;
+  height:70px;
+  margin-right: -5px;}
 
 #potenciacao{
-   margin-right: -40px;
-   margin-left: 10px;
-      margin-top: -15px;
-}
+width: 100%;
+  height:70px;
+  margin-right: -5px;}
 
 #restoDivisao{
-   margin-left: -20px;
-      margin-top: -15px;
-}
+width: 100%;
+  height:70px;
+  margin-right: -5px;}
 
 #porcentagem{
-   margin-right: -40px;
-   margin-left: 10px;
-      margin-top: -15px;
-}
+width: 100%;
+  height:70px;
+  margin-right: -5px;}
 
 #raiz{
-   margin-left: -20px;
-      margin-top: -15px;
+width: 100%;
+  height:70px;
+  margin-right: -5px;}
+
+
+.simbolo{
+  background-color: purple;
+  border-color: rgb(63, 64, 63);
 }
 
-button:hover {
-    border-color:purple;
-    background-color: rgb(255, 255, 255);
+#limpar{
+  background-color: red;
 }

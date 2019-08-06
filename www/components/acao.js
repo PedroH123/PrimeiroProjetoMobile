@@ -5,14 +5,14 @@ var resultado;
 var operador = false;
 var numeral = false;
 var raiz = false;
-
+var ponto = false;
 $(document).on("click","#limpar",function(){
   
   $("#resultado").val("");
   operador = false;
   numeral = false;
   raiz = false;
-
+ ponto = false;
 })
 
 $(document).on("click","#igual",function(){
@@ -23,37 +23,38 @@ $(document).on("click","#igual",function(){
   switch(valorTotal[1]){
 
     case "+":
-       resultado = parseInt(valorTotal[0]) + parseInt(valorTotal[2]);
+       resultado = parseFloat(valorTotal[0]) + parseFloat(valorTotal[2]);
        $("#resultado").val(resultado);
     break;
     case "-":
-       resultado = parseInt(valorTotal[0]) - parseInt(valorTotal[2]);
+       resultado = parseFloat(valorTotal[0]) - parseFloat(valorTotal[2]);
        $("#resultado").val(resultado);
     break;
     case "X":
-       resultado = parseInt(valorTotal[0]) * parseInt(valorTotal[2]);
+       resultado = parseFloat(valorTotal[0]) * parseFloat(valorTotal[2]);
        $("#resultado").val(resultado);
     break;
     case "^":
-       resultado = Math.pow(parseInt(valorTotal[0]),parseInt(valorTotal[2]));
+       resultado = Math.pow(parseFloat(valorTotal[0]),parseFloat(valorTotal[2]));
        $("#resultado").val(resultado);
     break;
     case "%":
-       resultado = parseInt(valorTotal[0]) / 100;
+       resultado = parseFloat(valorTotal[0]) / 100;
        $("#resultado").val(resultado);
     break;
     case "√":
-       resultado = Math.sqrt(parseInt(valorTotal[0]));
+       resultado = Math.sqrt(parseFloat(valorTotal[0]));
        $("#resultado").val(resultado);
     break;
     case "÷":
-       resultado = parseInt(valorTotal[0]) % parseInt(valorTotal[2]);
+       resultado = parseFloat(valorTotal[0]) % parseFloat(valorTotal[2]);
        $("#resultado").val(resultado);
     break;
 
     operador = false;
     numeral = false;
     raiz = false;
+    ponto = false;
   }  
 })
 
@@ -140,11 +141,17 @@ $(document).on("click","#0",function(){
   }
 })
 $(document).on("click","#ponto",function(){
-  if(raiz == false){
+  if(raiz == false && ponto == false && numeral == true){
     numero = ".";
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
-  numeral = true;
+  ponto = true;
+  }
+  else if(ponto == false){
+    numero = "0.";
+  numero = $("#resultado").val() + numero;
+  $("#resultado").val(numero);
+  ponto = true;
   }
 })
 
