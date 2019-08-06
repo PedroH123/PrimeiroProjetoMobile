@@ -97,3 +97,8 @@ width: 100%;
 #limpar{
   background-color: red;
 }
+
+#igual{
+  background-color: green;
+  font-size: 30px;
+}
