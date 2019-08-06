@@ -147,7 +147,7 @@ $(document).on("click","#ponto",function(){
   $("#resultado").val(numero);
   ponto = true;
   }
-  else if(ponto == false){
+  else if(ponto == false && raiz == false){
     numero = "0.";
   numero = $("#resultado").val() + numero;
   $("#resultado").val(numero);
